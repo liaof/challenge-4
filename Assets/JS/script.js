@@ -23,13 +23,12 @@ myStorage = window.localStorage;
 
 
 $(".card-body").on("click", "button", function(){
-       
-
-        //this if loop ensures the timer is only triggered when this event listener is first called
-        //otherwise with each successive click on the .card//change the button to a skip button after the first the it's pressed.
-            
+        console
+        
+        //var q = $(this).closest(".game-card").find(".question");
+       // $(question).html(questionone);
         if (n==0){
-        var myInt = setInterval (function(){
+        setInterval (function(){
             if(timer>0){
                 timer--;
                 var t = $("#time-left");
@@ -38,6 +37,8 @@ $(".card-body").on("click", "button", function(){
             }
             else{
                 $(".question").html("You have Run out of Time");
+                //when the time is out, disable the gamespace
+                $(".game-card").html("GAME OVER");
                 
             }
          },  1000 );
@@ -49,6 +50,7 @@ $(".card-body").on("click", "button", function(){
             //$(this).html("Skip");
             createQuestion(this, n);
             createAnswer(this,n);
+            $(this).remove();
        
         }
         //upon completion of the questions
