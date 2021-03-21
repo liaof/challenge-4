@@ -1,0 +1,17 @@
+#player_info{
+    background-color:blue;
+    
+}
+.row{
+    background-color:red;
+    background:red;
+}
+
+.box{
+    //background-color: blue;
+}
+body {
+    padding: 40px 40px;
+    height: 100vh;
+    width: 100vw;
+}
